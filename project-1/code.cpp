@@ -26,15 +26,16 @@ struct attend_event {  //参加项目类
 	int score_num;    //分数成绩
 };
 
-struct  student { //运动员类（学生类）可改名为athlete
+typedef struct  student { //运动员类（学生类）可改名为athlete
 	char* name;
 	int ID;  //学号
 	char* sex;
 	char* academy; //书院 
 	struct attend_event attendence[3]; //参加的项目
+	int nums ;//项目数量
 	int total_score;
-} ;
-struct student All_student[max_stu];
+} Student;
+Student All_student[max_stu];
 
 struct academy {
 	struct student athlete[max_aca_stu];
